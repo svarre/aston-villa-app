@@ -5,6 +5,8 @@ COPY package.json ./
 RUN npm install
 COPY . .
 RUN npm run build
+EXPOSE 4200
+EXPOSE 80
 
 ### STAGE 2: Run ###
 FROM nginx:1.17.1-alpine
